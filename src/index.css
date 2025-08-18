@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poiret One", sans-serif;
+}
+
+body {
+  background-color: darkred;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  padding: 1rem;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+header nav {
+  margin: 0 auto;
+  max-width: 400px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+header nav a {
+  color: white;
+  font-family: "Spirax", sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  text-decoration: none;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+section:last-child {
+  margin-bottom: 0;
+}
+
+section h1 {
+  font-family: "Spirax", sans-serif;
+  font-size: 64px;
+  color: darkred;
+}
+
+section p {
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ffffff;
+  font-size: 24px;
+  background-color: darkred;
+  padding: 0.8rem;
+  text-align: center;
+  font-weight: bold;
+  opacity: 0.7;
+}
+
+section p:nth-of-type(1) {
+  position: relative;
+  right: 6rem;
+}
+
+section p:nth-of-type(2) {
+  position: relative;
+  left: 6rem;
+}
+
+section ul {
+  list-style-type: none;
+  color: #ffffff;
+  font-size: 20px;
+  background-color: #000000;
+  padding: 0.5rem;
+  opacity: 0.6;
+  font-weight: bold;
+}
+
+.hot {
+  background-image: url("assets/hot.jpg");
+}
+
+.juicy {
+  background-image: url("assets/juicy.jpg");
+}
+
+.cozy {
+  background-image: url("assets/cosy.jpg");
+}
+
+.list-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: bold;
+  opacity: 0.7;
+  box-sizing: border-box;
+  padding: 0.5rem;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  section p:nth-of-type(1) {
+    position: static;
+  }
+
+  section p:nth-of-type(2) {
+    position: static;
+    display: none;
+  }
+
+  .list-container,
+  section p {
+    width: 90%;
+  }
+}
