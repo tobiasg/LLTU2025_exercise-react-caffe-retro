@@ -3,25 +3,26 @@ import type { ReactElement } from "react";
 interface SectionProps {
   id: string;
   title: string;
-  description: string[];
+  descriptions: string[];
   items: { label: string; value: string }[];
 }
 
 export const Section = ({
   id,
   title,
-  description,
+  descriptions,
   items,
 }: SectionProps): ReactElement => {
   return (
     <>
       <section id={id} className={id}>
         <h1>{title}</h1>
-        {description.length > 0 && description.map((text) => <p>{text}</p>)}
+        {descriptions.length > 0 &&
+          descriptions.map((text, index) => <p key={index}>{text}</p>)}
         {items.length > 0 && (
           <div className="list-container">
             {items.map((item) => (
-              <div className="list-item">
+              <div key={item.label} className="list-item">
                 <span>{item.label}</span>
                 <span>{item.value}</span>
               </div>
